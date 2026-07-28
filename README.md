@@ -69,11 +69,7 @@ FAST-LIO 始终维护连续局部里程计。重定位模块只发布 `map → o
 | 操作系统 | Ubuntu 22.04 LTS / aarch64 | Jetson 运行环境 |
 | ROS | ROS 2 Humble | 节点通信、TF、launch 与 RViz2 |
 
-当前机载网络使用 Mid-360 地址 `192.168.1.151`，Orin 雷达网口配置为 `192.168.1.5/24`。飞控串口使用 460800 baud，设备路径为：
 
-```text
-/dev/serial/by-id/usb-Fancinnov_Mcontroller-v7_307838633430-if00
-```
 
 ## Software Stack
 
@@ -415,6 +411,4 @@ AeroMind/
 
 AeroMind 的项目自有部分负责这些组件之间的 ROS 2 接口、坐标语义、启动编排、目标适配、轨迹执行、地图保存、重定位 TF 与可视化集成。
 
-## License
 
-AeroMind 自有集成代码采用 [Apache License 2.0](LICENSE)。`src/third_party/` 中的组件遵循各自目录内的许可证与版权声明。
