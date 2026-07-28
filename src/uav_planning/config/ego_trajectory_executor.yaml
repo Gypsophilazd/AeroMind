@@ -1,0 +1,12 @@
+/**:
+  ros__parameters:
+    bspline_topic: /planning/bspline
+    goal_topic: /uav/planning/goal
+    odometry_topic: /uav/planning/odometry
+    mission_topic: /mission_001
+    control_rate_hz: 20.0
+    enable_mission_output: false
+    frame_id: odom
+    yaw_lookahead_sec: 0.5
+    max_yaw_rate_rad_s: 1.57079632679
+    planned_path_sample_sec: 0.05

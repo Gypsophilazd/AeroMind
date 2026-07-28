@@ -1,0 +1,54 @@
+# ROS 2 / colcon
+/build/
+/install/
+/log/
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Runtime state and recordings
+/runtime_logs/
+/flight_logs/
+/telemetry/
+tmp/
+/data/
+*.bag
+*.db3
+*.db3-shm
+*.db3-wal
+*.mcap
+*.sqlite3
+
+# Generated point clouds. Curated release maps remain versionable.
+*.pcd
+!/maps/demo/*.pcd
+!/maps/demo/**/*.pcd
+!/maps/final/*.pcd
+!/maps/final/**/*.pcd
+
+# CMake and native build artifacts outside colcon directories
+compile_commands.json
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+*.o
+*.so
+*.a
+
+# Jetson/Linux editor swap files
+*.swp
+*.swo
+*~
+
+# IDE and desktop metadata
+.vscode/
+.vscode.zip
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,11 @@
+/**:
+  ros__parameters:
+    input_topic: /odometry
+    output_topic: /uav/planning/odometry
+    diagnostics_topic: /uav/planning/odometry_adapter/diagnostics
+    window_size: 20
+    ema_alpha: 0.35
+    min_dt_sec: 0.04
+    max_dt_sec: 0.50
+    max_reasonable_velocity_mps: 8.0
+    diagnostics_rate_hz: 1.0

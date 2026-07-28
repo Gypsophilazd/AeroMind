@@ -1,0 +1,9 @@
+/**:
+  ros__parameters:
+    input_topic: /cloud_registered
+    output_path: /home/nvidia/uav_ws/maps/session_map.pcd
+    input_frame: odom
+    map_frame: map
+    voxel_size_m: 0.20
+    compact_every_clouds: 20
+    max_points: 3000000

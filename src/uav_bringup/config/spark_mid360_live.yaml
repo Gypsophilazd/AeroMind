@@ -1,0 +1,48 @@
+/**:
+  ros__parameters:
+    common:
+      map_frame: odom
+      lidar_frame: lidar_link
+      imu_frame: base_link
+      base_frame: ""
+      visualization_frame: imu
+      time_sync_en: false
+
+    preprocess:
+      lidar_type: 5
+      scan_line: 4
+      blind: 0.5
+      timestamp_unit: 3
+      scan_rate: 10
+
+    mapping:
+      acc_cov: 0.1
+      gyr_cov: 0.1
+      b_acc_cov: 0.0001
+      b_gyr_cov: 0.0001
+      fov_degree: 360.0
+      det_range: 100.0
+      extrinsic_est_en: false
+      extrinsic_T: [-0.011, -0.02329, 0.04412]
+      extrinsic_R: [1.0, 0.0, 0.0,
+                    0.0, 1.0, 0.0,
+                    0.0, 0.0, 1.0]
+
+    filter_size_map: 0.5
+    point_filter_num: 4
+    point_filter_num_for_preprocessing: 1
+
+    publish:
+      path_en: true
+      scan_publish_en: true
+      dense_publish_en: true
+      scan_lidarframe_pub_en: true
+      scan_bodyframe_pub_en: true
+      scan_baseframe_pub_en: false
+
+    pcd_save:
+      pcd_save_en: false
+      interval: -1
+
+    verbose: false
+    pcl_verbose: false

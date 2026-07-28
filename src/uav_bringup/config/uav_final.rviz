@@ -1,0 +1,308 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+  - Class: rviz_common/Views
+    Name: Views
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.35
+      Cell Size: 1
+      Class: rviz_default_plugins/Grid
+      Color: 110; 110; 120
+      Enabled: true
+      Line Style:
+        Line Width: 0.03
+        Value: Lines
+      Name: Map Grid
+      Plane: XY
+      Plane Cell Count: 30
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Alpha: 0.42
+      Autocompute Intensity Bounds: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/PointCloud2
+      Color: 155; 160; 170
+      Color Transformer: FlatColor
+      Decay Time: 0
+      Enabled: true
+      Name: Prior Map
+      Position Transformer: XYZ
+      Selectable: false
+      Size (Pixels): 2
+      Style: Points
+      Topic:
+        Depth: 1
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /prior_map
+      Use Fixed Frame: true
+      Value: true
+    - Alpha: 0.9
+      Autocompute Intensity Bounds: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/PointCloud2
+      Color Transformer: AxisColor
+      Decay Time: 2
+      Enabled: true
+      Max Color: 255; 255; 255
+      Min Color: 0; 0; 0
+      Name: Live Registered Cloud
+      Position Transformer: XYZ
+      Selectable: false
+      Size (Pixels): 4
+      Style: Points
+      Topic:
+        Depth: 1
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /cloud_registered
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
+    - Alpha: 0.35
+      Autocompute Intensity Bounds: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/PointCloud2
+      Color: 255; 150; 35
+      Color Transformer: FlatColor
+      Decay Time: 0
+      Enabled: true
+      Name: KISS Aligned Scan
+      Position Transformer: XYZ
+      Selectable: false
+      Size (Pixels): 3
+      Style: Points
+      Topic:
+        Depth: 1
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /relocalization/aligned_cloud
+      Use Fixed Frame: true
+      Value: true
+    - Alpha: 0.30
+      Autocompute Intensity Bounds: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/PointCloud2
+      Color: 255; 70; 20
+      Color Transformer: FlatColor
+      Decay Time: 1
+      Enabled: true
+      Name: EGO Inflated Obstacles
+      Position Transformer: XYZ
+      Selectable: false
+      Size (Pixels): 3
+      Style: Points
+      Topic:
+        Depth: 1
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /grid_map/occupancy_inflate
+      Use Fixed Frame: true
+      Value: true
+    - Angle Tolerance: 0.1
+      Class: rviz_default_plugins/Odometry
+      Enabled: true
+      Keep: 100
+      Name: FAST-LIO Odometry
+      Position Tolerance: 0.03
+      Shape:
+        Alpha: 1
+        Axes Length: 0.45
+        Axes Radius: 0.035
+        Color: 50; 255; 80
+        Value: Axes
+      Topic:
+        Depth: 2
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /uav/planning/odometry
+      Value: true
+    - Angle Tolerance: 0.2
+      Class: rviz_default_plugins/Odometry
+      Enabled: true
+      Keep: 30
+      Name: FC Feedback
+      Position Tolerance: 0.1
+      Shape:
+        Alpha: 0.8
+        Axes Length: 0.35
+        Axes Radius: 0.025
+        Color: 190; 80; 255
+        Value: Axes
+      Topic:
+        Depth: 2
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /odom_global_001
+      Value: true
+    - Alpha: 0.9
+      Buffer Length: 1
+      Class: rviz_default_plugins/Path
+      Color: 40; 255; 70
+      Enabled: true
+      Line Style: Lines
+      Line Width: 0.035
+      Name: FAST-LIO Path
+      Pose Style: None
+      Topic:
+        Depth: 2
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /path
+      Value: true
+    - Class: rviz_default_plugins/Marker
+      Enabled: true
+      Name: Goal
+      Topic:
+        Depth: 1
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /uav/planning/goal_marker
+      Value: true
+    - Class: rviz_default_plugins/Marker
+      Enabled: true
+      Name: EGO Planned Trajectory
+      Topic:
+        Depth: 2
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /uav/planning/planned_trajectory
+      Value: true
+    - Alpha: 1
+      Buffer Length: 1
+      Class: rviz_default_plugins/Path
+      Color: 255; 220; 20
+      Enabled: true
+      Line Style: Lines
+      Line Width: 0.055
+      Name: Commanded Trajectory
+      Pose Style: None
+      Topic:
+        Depth: 2
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /uav/planning/executed_trajectory
+      Value: true
+    - Class: rviz_default_plugins/Pose
+      Enabled: true
+      Name: Commanded Setpoint
+      Shape: Axes
+      Axes Length: 0.55
+      Axes Radius: 0.05
+      Topic:
+        Depth: 2
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /uav/planning/commanded_setpoint
+      Value: true
+    - Class: rviz_default_plugins/Marker
+      Enabled: true
+      Name: Demo Obstacle
+      Topic:
+        Depth: 1
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /uav/planning/simulation_obstacle
+      Value: true
+    - Class: rviz_default_plugins/Marker
+      Enabled: true
+      Name: UAV Marker
+      Topic:
+        Depth: 1
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /uav/planning/simulation_vehicle
+      Value: true
+    - Class: rviz_default_plugins/Marker
+      Enabled: true
+      Name: Software Validation
+      Topic:
+        Depth: 1
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /uav/planning/simulation_evidence
+      Value: true
+    - Class: rviz_default_plugins/Marker
+      Enabled: true
+      Name: Relocalization State
+      Topic:
+        Depth: 1
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /relocalization/state_marker
+      Value: true
+    - Class: rviz_default_plugins/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: true
+      Marker Scale: 0.5
+      Name: TF map-odom-base-lidar
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Update Interval: 0
+      Value: true
+  Enabled: true
+  Global Options:
+    Background Color: 25; 28; 34
+    Fixed Frame: map
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/Interact
+      Hide Inactive Objects: true
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+    - Class: rviz_default_plugins/Measure
+      Line color: 128; 128; 0
+    - Class: rviz_default_plugins/SetGoal
+      Topic:
+        Depth: 1
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /goal_pose
+  Transformation:
+    Current:
+      Class: rviz_default_plugins/TF
+  Value: true
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 13
+      Focal Point:
+        X: 2.5
+        Y: 0
+        Z: 0.8
+      Name: Current View
+      Pitch: 0.72
+      Target Frame: <Fixed Frame>
+      Value: Orbit (rviz)
+      Yaw: 1.55
+    Saved: ~
+Window Geometry:
+  Height: 900
+  Width: 1400

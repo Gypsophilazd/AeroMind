@@ -1,0 +1,9 @@
+/**:
+  ros__parameters:
+    input_topic: /goal_pose
+    ego_goal_topic: /move_base_simple/goal
+    normalized_goal_topic: /uav/planning/goal
+    goal_marker_topic: /uav/planning/goal_marker
+    fixed_altitude_m: 1.0
+    frame_id: odom
+    tf_timeout_sec: 0.2

@@ -1,0 +1,67 @@
+/**:
+  ros__parameters:
+    fsm/flight_type: 1
+    fsm/thresh_replan_time: 1.0
+    fsm/thresh_no_replan_meter: 1.0
+    fsm/planning_horizon: 7.5
+    fsm/planning_horizen_time: 3.0
+    fsm/emergency_time: 1.0
+    fsm/realworld_experiment: false
+    fsm/fail_safe: true
+    fsm/waypoint_num: 0
+
+    grid_map/resolution: 0.5
+    grid_map/map_size_x: 300.0
+    grid_map/map_size_y: 300.0
+    grid_map/map_size_z: 30.0
+    grid_map/local_update_range_x: 10.0
+    grid_map/local_update_range_y: 10.0
+    grid_map/local_update_range_z: 8.0
+    grid_map/obstacles_inflation: 0.5
+    grid_map/local_map_margin: 2
+    grid_map/ground_height: -10.0
+    grid_map/cx: 321.04638671875
+    grid_map/cy: 243.44969177246094
+    grid_map/fx: 387.229248046875
+    grid_map/fy: 387.229248046875
+    grid_map/use_depth_filter: true
+    grid_map/depth_filter_tolerance: 0.15
+    grid_map/depth_filter_maxdist: 5.0
+    grid_map/depth_filter_mindist: 0.2
+    grid_map/depth_filter_margin: 2
+    grid_map/k_depth_scaling_factor: 1000.0
+    grid_map/skip_pixel: 2
+    grid_map/p_hit: 0.65
+    grid_map/p_miss: 0.35
+    grid_map/p_min: 0.12
+    grid_map/p_max: 0.90
+    grid_map/p_occ: 0.80
+    grid_map/min_ray_length: 0.1
+    grid_map/max_ray_length: 8.0
+    grid_map/virtual_ceil_height: 18.0
+    grid_map/virtual_ceil_yp: -1.0
+    grid_map/virtual_ceil_yn: -1.0
+    grid_map/visualization_truncate_height: 16.0
+    grid_map/show_occ_time: false
+    grid_map/pose_type: 1
+    grid_map/frame_id: odom
+    grid_map/odom_depth_timeout: 1.0
+
+    manager/max_vel: 3.0
+    manager/max_acc: 3.0
+    manager/max_jerk: 4.0
+    manager/control_points_distance: 0.4
+    manager/feasibility_tolerance: 0.05
+    manager/planning_horizon: 7.5
+    manager/use_distinctive_trajs: false
+    manager/drone_id: -1
+
+    optimization/lambda_smooth: 1.0
+    optimization/lambda_collision: 0.5
+    optimization/lambda_feasibility: 0.1
+    optimization/lambda_fitness: 1.0
+    optimization/dist0: 0.5
+    optimization/swarm_clearance: 0.5
+    optimization/max_vel: 3.0
+    optimization/max_acc: 3.0
+    optimization/order: 3
